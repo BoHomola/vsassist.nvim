@@ -73,7 +73,7 @@ colors.get_colors = function()
             vscPink = '#C586C0',
 
             vsaGold = '#ffd700'
-            vsaDarkKhaki = '#bdb76b0'
+            vsaDarkKhaki = '#bdb76b'
             vsaPurple = '#bd63c5'
             vsaBrown = '#bd63c5'
             vsaOrange = '#ff8000'
