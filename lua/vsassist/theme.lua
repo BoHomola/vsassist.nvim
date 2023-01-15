@@ -135,7 +135,13 @@ theme.set_highlights = function(opts)
     hl(0, '@tag.delimiter', { fg = c.vscGray, bg = 'NONE' })
     hl(0, '@tag.attribute', { fg = c.vscLightBlue, bg = 'NONE' })
 
-    hl(0, '@text.title', { fg = isDark and c.vscBlue or c.vscYellowOrange, bold = true })
+  --LSP
+   hl(0, 'LspNamespace', { fg = c.vsaOrange, bg = 'NONE' })
+   
+
+
+
+  hl(0, '@text.title', { fg = isDark and c.vscBlue or c.vscYellowOrange, bold = true })
     hl(0, '@text.literal', { fg = c.vscFront, bg = 'NONE' })
     hl(0, 'markdown@text.literal', { fg = c.vscOrange, bg = 'NONE' })
     hl(0, 'markdown_inline@text.literal', { fg = c.vscOrange, bg = 'NONE' })
