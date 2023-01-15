@@ -2,7 +2,7 @@ local hl = vim.api.nvim_set_hl
 local theme = {}
 
 theme.set_highlights = function(opts)
-    local c = require('vscode.colors').get_colors()
+    local c = require('vsassist.colors').get_colors()
     c = vim.tbl_extend('force', c, opts['color_overrides'])
     local isDark = vim.o.background == 'dark'
 

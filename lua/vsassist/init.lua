@@ -1,10 +1,10 @@
--- vscode.nvim color scheme
+-- vsassist.nvim color scheme
 -- Lua port of https://github.com/tomasiser/vim-code-dark
 -- By http://github.com/mofiqul
-local vscode = {}
-local theme = require('vscode.theme')
+local vsassist = {}
+local theme = require('vsassist.theme')
 
-vscode.setup = function(user_opts)
+vsassist.setup = function(user_opts)
     local defaults = {
         transparent = false,
         italic_comments = false,
@@ -15,12 +15,12 @@ vscode.setup = function(user_opts)
 
     -- backwards compatibility: let users still set settings with global vars
     local global_settings_opts = vim.tbl_extend('force', defaults, {
-        transparent = (vim.g.vscode_transparent == true
-                       or vim.g.vscode_transparent == 1),
-        italic_comments = (vim.g.vscode_italic_comment == true
-                           or vim.g.vscode_italic_comment == 1),
-        disable_nvimtree_bg = (vim.g.vscode_disable_nvim_tree_bg == true
-                               or vim.g.vscode_disable_nvim_tree_bg == 1),
+        transparent = (vim.g.vsassist_transparent == true
+                       or vim.g.vsassist_transparent == 1),
+        italic_comments = (vim.g.vsassist_italic_comment == true
+                           or vim.g.vsassist_italic_comment == 1),
+        disable_nvimtree_bg = (vim.g.vsassist_disable_nvim_tree_bg == true
+                               or vim.g.vsassist_disable_nvim_tree_bg == 1),
     })
 
     -- but override global vars settings with setup() settings
@@ -37,7 +37,7 @@ vscode.setup = function(user_opts)
     end
 
     vim.o.termguicolors = true
-    vim.g.colors_name = 'vscode'
+    vim.g.colors_name = 'vsassist'
 
     theme.set_highlights(opts)
     theme.link_highlight()
@@ -47,9 +47,9 @@ vscode.setup = function(user_opts)
     end
 end
 
-vscode.change_style = function(style)
+vsassist.change_style = function(style)
     vim.o.background = style
-    vim.cmd([[colorscheme vscode]])
+    vim.cmd([[colorscheme vsassist]])
 end
 
-return vscode
+return vsassist
